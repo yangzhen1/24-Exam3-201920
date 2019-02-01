@@ -105,20 +105,27 @@ def fibonacci(n):
 
 
 def problem1(n):
-    a = 0
+    k = 0
     b = [0, 1]
-    for k in range(100):
-        if k == 1:
+    s= 0
+    while True:
+        if s == 1:
             a = 0
-        elif k == 2:
+        elif s == 2:
             a = 1
         else:
-            a = b[k-1] + b[k-2]
+            a = b[s-1] + b[s-2]
             b.append(a)
+        s +=1
 
-    for j in range(100):
-        if b[j] >= n:
-            return b[j-1]
+        if b[s-1] >= n:
+            return b[s - 2]
+
+
+
+
+
+
     """
     What comes in:
       -- An integer greater than 1:  n

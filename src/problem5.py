@@ -119,7 +119,7 @@ def run_test_problem5():
 def problem5(seq_of_seq):
     list = []
     for k in range(len(seq_of_seq)):
-        a = 0
+        a = float('-inf')
         for j in range(len(seq_of_seq[k])):
             if seq_of_seq[k][j] > a:
                 a = seq_of_seq[k][j]
