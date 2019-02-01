@@ -3,9 +3,9 @@ Exam 3, problem 4.
 
 Authors: Vibha Alangar, Aaron Wilkin, David Mutchler, Dave Fisher, 
          Matt Boutell, Amanda Stouder, their colleagues and 
-         PUT_YOUR_NAME_HERE.  January 2019.
+         Zhen Yang.  January 2019.
          
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -17,7 +17,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the   is_prime   function defined below.
+# DONE: 2.  READ the doc-string for the   is_prime   function defined below.
 # It is the same as you have seen before.
 # After you UNDERSTAND the doc-string (JUST the doc-string, NOT the code),
 # ASKING QUESTIONS AS NEEDED, change the above _TODO_ to DONE.
@@ -240,6 +240,13 @@ def run_test_problem4():
 
 
 def problem4(seq_of_seq, n):
+    a = 0
+    for k in range(len(seq_of_seq)):
+        for j in range(len(seq_of_seq[k])):
+            if is_prime(seq_of_seq[k][j]) and seq_of_seq[k][j] > n:
+                a = seq_of_seq[k][j]
+                return a
+    return -1
     """
     What comes in:
       -- A sequence of sequences: seq_of_seq
@@ -272,7 +279,7 @@ def problem4(seq_of_seq, n):
       :rtype: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 

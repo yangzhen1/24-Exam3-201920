@@ -3,9 +3,9 @@ Exam 3, problem 1.
 
 Authors: Vibha Alangar, Aaron Wilkin, David Mutchler, Dave Fisher, 
          Matt Boutell, Amanda Stouder, their colleagues and 
-         PUT_YOUR_NAME_HERE.  January 2019.
+         Zhen Yang.  January 2019.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -105,6 +105,20 @@ def fibonacci(n):
 
 
 def problem1(n):
+    a = 0
+    b = [0, 1]
+    for k in range(100):
+        if k == 1:
+            a = 0
+        elif k == 2:
+            a = 1
+        else:
+            a = b[k-1] + b[k-2]
+            b.append(a)
+
+    for j in range(100):
+        if b[j] >= n:
+            return b[j-1]
     """
     What comes in:
       -- An integer greater than 1:  n
@@ -126,7 +140,7 @@ def problem1(n):
       :rtype: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # **** IMPORTANT ****:
     # We supplied a   fibonacci   function above.
